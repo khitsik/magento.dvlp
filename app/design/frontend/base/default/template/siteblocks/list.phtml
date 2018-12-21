@@ -1,0 +1,33 @@
+<form>
+    <p><b>Закажите обратный звонок</b></p>
+    Your name <input type="text" name="name"><br>
+    Your phone <input type="text" name="phone"><br>
+    <input type="submit">
+</form>
+
+<?php
+
+$name = $_GET['name'];
+$phone = $_GET['phone'];
+
+$table = 'ign_siteblock';
+//mysqli_query($conn, "INSERT INTO `ign_siteblock` (`block_id`, `title`, `content`, `block_status`, `created_at`) VALUES (NULL, '$title', '$content', '1', CURRENT_TIMESTAMP);");
+
+/**
+ * Получение ресурсной модели
+ */
+$resource = Mage::getSingleton('core/resource');
+
+/**
+ * Установка соединения для записи
+ */
+$writeConnection = $resource->getConnection('core_write');
+
+$query = "INSERT INTO `ign_siteblock` (`block_id`, `name`, `phone`, `block_status`, `created_at`) VALUES (NULL, '$name', '$phone', '1', CURRENT_TIMESTAMP);";
+
+/**
+ * Выполнение запроса
+ */
+$writeConnection->query($query);
+
+?>

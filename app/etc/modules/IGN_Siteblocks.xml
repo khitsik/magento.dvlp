@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <IGN_Siteblocks>
+            <active>true</active>
+            <codePool>local</codePool>
+        </IGN_Siteblocks>
+    </modules>
+</config>

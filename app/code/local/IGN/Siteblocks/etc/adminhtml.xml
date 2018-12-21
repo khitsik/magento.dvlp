@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+
+    <acl>
+        <resources>
+            <admin>
+                <children>
+
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <siteblocks translate="title" module="siteblocks">
+                                        <title>Siteblocks</title>
+                                    </siteblocks>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <cms>
+            <children>
+                <siteblocks translate="title" module="siteblocks">
+                    <title>Siteblocks</title>
+                    <action>adminhtml/siteblocks</action>
+                    <sort_order>20</sort_order>
+                </siteblocks>
+            </children>
+        </cms>
+    </menu>
+</config>
